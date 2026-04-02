@@ -1,44 +1,44 @@
 {
-    "name": "@react/starter-kit",
-    "version": "1.0.0",
-    "bin": {
-        "create-react-starter-kit": "bin/cli.js"
-    },
-    "keywords": [
-        "react",
-        "bunjs",
-        "express"
-    ],
-    "description": "Create React-powered applications with one command",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/harshit-ostwal/react-starter-kit.git"
-    },
-    "homepage": "https://github.com/harshit-ostwal/react-starter-kit",
-    "author": "Harshit Ostwal <codewithharshitjain@gmail.com>",
-    "type": "module",
-    "bugs": {
-        "url": "https://github.com/harshit-ostwal/react-starter-kit/issues"
-    },
-    "license": "MIT",
-    "files": [
-        "bin",
-        "template"
-    ],
-    "dependencies": {
-        "chalk": "^5.6.0",
-        "commander": "^14.0.0",
-        "ora": "^8.2.0",
-        "prompts": "^2.4.2",
-        "readline": "^1.3.0"
-    },
-    "engines": {
-        "bun": ">=1.3.4"
-    },
-    "nextBundleAnalysis": {
-        "budget": 358400,
-        "budgetPercentIncreaseRed": 20,
-        "minimumChangeThreshold": 0,
-        "showDetails": true
-    }
+  "name": "vite-starter-kit",
+  "version": "1.0.0",
+  "bin": {
+    "create-vite-starter-kit": "bin/cli.js"
+  },
+  "keywords": [
+    "react",
+    "bunjs",
+    "express"
+  ],
+  "description": "Create React-powered applications with one command",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harshit-ostwal/react-starter-kit.git"
+  },
+  "homepage": "https://github.com/harshit-ostwal/react-starter-kit",
+  "author": "Harshit Ostwal <codewithharshitjain@gmail.com>",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/harshit-ostwal/react-starter-kit/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "bin",
+    "template"
+  ],
+  "dependencies": {
+    "chalk": "^5.6.0",
+    "commander": "^14.0.0",
+    "ora": "^8.2.0",
+    "prompts": "^2.4.2",
+    "readline": "^1.3.0"
+  },
+  "engines": {
+    "bun": ">=1.3.4"
+  },
+  "nextBundleAnalysis": {
+    "budget": 358400,
+    "budgetPercentIncreaseRed": 20,
+    "minimumChangeThreshold": 0,
+    "showDetails": true
+  }
 }
