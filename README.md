@@ -1,46 +1,74 @@
-# backend-starter-kit
+# react-starter-kit
 
-Scaffold a production-ready backend project with a single command.
+Scaffold a production-ready React application with a single command.
 
 ## Usage
 
 ```sh
-bunx create-backend-starter-kit <project-name>
+bunx create-vite-starter-kit <project-name>
 ```
 
 Or with npm:
 
 ```sh
-npx create-backend-starter-kit <project-name>
+npx create-vite-starter-kit <project-name>
+```
+
+Or with pnpm:
+
+```sh
+pnpx create-vite-starter-kit <project-name>
 ```
 
 ## What's included
 
-- **Bun** runtime for fast performance
-- **Express.js** for routing and middleware
-- **Prisma ORM** for PostgreSQL
-- **Zod** for schema validation
-- **Swagger UI** for API documentation
-- **Winston** for structured logging
+- **React 19** for building UI components
+- **Vite** for lightning-fast dev server and builds
+- **Tailwind CSS v4** for utility-first styling
+- **Axios** for HTTP requests
 - **Biome** for formatting and linting
-- **Helmet, CORS, JWT, cookie-parser** for security
-- GitHub Actions CI workflow out of the box
+- Pre-configured folder structure for scalable apps
+
+## Interactive Setup
+
+The CLI will prompt you to:
+
+1. Enter your project name (or use `.` for the current directory)
+2. Choose your preferred package manager — **pnpm** (recommended), **npm**, **yarn**, or **bun**
+
+Dependencies are installed automatically after scaffolding.
 
 ## Project Structure
 
 ```
 ├── src/
-│   ├── app.js
-│   ├── index.js
-│   ├── config/
+│   ├── app.jsx
+│   ├── main.jsx
+│   ├── index.css
+│   ├── components/
 │   ├── constants/
-│   ├── core/
-│   └── routes/
-├── prisma/
-│   └── schema.prisma
-├── .env.example
+│   ├── context/
+│   ├── lib/
+│   │   └── axios.js
+│   ├── routes/
+│   ├── screens/
+│   └── utils/
+├── index.html
+├── vite.config.js
+├── biome.json
 └── package.json
 ```
+
+## Scripts
+
+| Script | Description |
+|---|---|
+| `dev` | Start the development server |
+| `build` | Build for production |
+| `preview` | Preview the production build |
+| `biome:format` | Format code with Biome |
+| `biome:lint` | Lint code with Biome |
+| `biome:check` | Run Biome format + lint |
 
 ## Requirements
 
@@ -48,7 +76,7 @@ npx create-backend-starter-kit <project-name>
 
 ## Repository
 
-[github.com/harshit-ostwal/backend-starter-kit](https://github.com/harshit-ostwal/backend-starter-kit)
+[github.com/harshit-ostwal/react-starter-kit](https://github.com/harshit-ostwal/react-starter-kit)
 
 ## License
 

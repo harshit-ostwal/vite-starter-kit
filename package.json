@@ -1,6 +1,6 @@
 {
   "name": "vite-starter-kit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "bin": {
     "create-vite-starter-kit": "bin/cli.js"
   },
