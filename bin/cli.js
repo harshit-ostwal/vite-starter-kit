@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { execSync } from "child_process";
-import { existsSync, mkdirSync, cpSync, renameSync } from "fs";
+import { existsSync, mkdirSync, cpSync } from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import ora from "ora";
@@ -53,17 +53,13 @@ async function main() {
     initial: 0,
   });
 
-  console.log(`\nCreating a new Backend app in ${chalk.cyan(projectPath)}.\n`);
+  console.log(`\nCreating a new Vite app in ${chalk.cyan(projectPath)}.\n`);
   console.log(`Using ${chalk.cyan(packageManager)}.\n`);
-  console.log(`Initializing project with template: backend\n`);
+  console.log(`Initializing project with template: app-tw\n`);
 
   if (projectName !== ".") mkdirSync(projectPath);
   const templateDir = path.join(__dirname, "../template");
   cpSync(templateDir, projectPath, { recursive: true });
-
-  const gitignoreSrc = path.join(projectPath, "gitignore");
-  const gitignoreDest = path.join(projectPath, ".gitignore");
-  if (existsSync(gitignoreSrc)) renameSync(gitignoreSrc, gitignoreDest);
 
   const spinner = ora("Initializing git repository...").start();
   runCommand("git init", { cwd: projectPath });
@@ -95,15 +91,6 @@ async function main() {
       `\n✅ Success! Created ${projectName} at ${chalk.cyan(projectPath)}`,
     ),
   );
-  console.log(chalk.cyan(`\nNext steps:`));
-  console.log(chalk.cyan(`  1. cd ${projectName}`));
-  console.log(chalk.cyan(`  2. Update .env with your database credentials`));
-  console.log(
-    chalk.cyan(
-      `  3. Run ${packageManager} run dev to start the backend server`,
-    ),
-  );
-  console.log(chalk.cyan(`  4. Access API docs at /api/v1/docs`));
 }
 
 main();
